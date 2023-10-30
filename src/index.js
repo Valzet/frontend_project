@@ -1,6 +1,6 @@
-const a = 'test';
+const a = 'test'
 
-console.warn(a);
+console.warn(a)
 // const babel = 3 * a;
 
 // function test() {

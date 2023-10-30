@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve",
-    "prettier": "prettier --check --config ./prettier.json ./src/index.js --log-level warn --write",
+    "prettier": "prettier --check --config ./prettier.json ./src --log-level warn --write",
     "lint": "eslint src",
     "prepare": "husky install"
   },
