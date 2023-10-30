@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "prettier": "prettier --check --config ./prettier.json ./src/index.js --log-level warn --write",
+    "lint": "eslint src",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,9 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "cssnano": "^6.0.1",
+    "eslint": "^8.52.0",
     "html-webpack-plugin": "^5.5.3",
+    "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
     "webpack": "^5.88.2",
@@ -29,6 +34,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "core-js": "^3.32.2"
+    "core-js": "^3.32.2",
+    "prettier": "^3.0.3"
   }
 }
