@@ -1,8 +1,32 @@
-const a = 'test';
+function CounterLogger() {
+  let count = 0;
+  function logCount() {
+    console.log(count);
+  }
+  function increment() {
+    count++;
+  }
+  return {
+    logCount,
+    increment,
+  };
+}
 
-console.warn(a);
-// const babel = 3 * a;
+const counter1 = new CounterLogger();
+counter1.increment();
+counter1.logCount();
 
-// function test() {
-//   return a + 3;
-// }
+const counter2 = new CounterLogger();
+counter2.increment();
+counter2.increment();
+counter2.logCount();
+
+const person = {
+  name: "Буба",
+  age: 30,
+  hobbies: ["Чилить", "Кодить"],
+};
+
+person.hobbies.push("Пыхать");
+console.log(person.hobbies);
+
