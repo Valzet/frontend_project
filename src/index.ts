@@ -1,9 +1,9 @@
 function CounterLogger() {
-  let count = 0;
-  function logCount() {
+  let count: number = 0;
+  function logCount(): void {
     console.log(count);
   }
-  function increment() {
+  function increment(): void {
     count++;
   }
   return {
@@ -12,16 +12,16 @@ function CounterLogger() {
   };
 }
 
-const counter1 = new CounterLogger();
+const counter1 = CounterLogger();
 counter1.increment();
 counter1.logCount();
 
-const counter2 = new CounterLogger();
+const counter2 = CounterLogger();
 counter2.increment();
 counter2.increment();
 counter2.logCount();
 
-const person = {
+const person: { name: string, age: number, hobbies: string[] } = {
   name: "Буба",
   age: 30,
   hobbies: ["Чилить", "Кодить"],
@@ -29,4 +29,3 @@ const person = {
 
 person.hobbies.push("Пыхать");
 console.log(person.hobbies);
-

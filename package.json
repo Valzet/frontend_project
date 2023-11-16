@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve",
-    "prettier": "prettier --check --config ./prettier.json ./src/index.js --log-level warn --write",
-    "lint": "eslint src",
+    "prettier": "prettier --check --config ./prettier.json ./src/index.ts --log-level warn --write",
+    "lint": "eslint ./src",
     "prepare": "husky install"
   },
   "repository": {
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "core-js": "^3.32.2",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "ts-loader": "^9.5.1"
   }
 }
